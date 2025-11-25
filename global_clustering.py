@@ -82,11 +82,12 @@ clusters = kmeans.fit_predict(X_pca)
 df['Cluster'] = clusters
 
 plt.figure(figsize=(10, 6))
-sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=clusters, palette='viridis', s=50)
+sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=clusters, palette=['#66b3ff', '#99ff99', '#ffcc99'], s=50)
 plt.title('Mental Health Survey Clusters (PCA Reduced)')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
 plt.legend(title='Cluster')
+plt.savefig('global_clustering.png')
 plt.show()
 
 print("\n--- Cluster Interpretation (Top responses per group) ---")
