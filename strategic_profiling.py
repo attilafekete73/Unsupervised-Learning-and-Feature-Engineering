@@ -72,7 +72,7 @@ kmeans_c0 = KMeans(n_clusters=3, random_state=42, n_init=10)
 df_c0['SubCluster'] = kmeans_c0.fit_predict(X_c0_pca)
 
 
-plt.figure(figsize=(18, 8))
+plt.figure(figsize=(12, 8))
 cluster_counts = df['Cluster'].value_counts().sort_index()
 labels_global = ['Cluster 0: The Aware (Target)', 'Cluster 1: The Unaware', 'Cluster 2: Contractors']
 plt.pie(cluster_counts, labels=labels_global, autopct='%1.1f%%', startangle=90, colors=['#66b3ff', '#99ff99', '#ffcc99'])
@@ -80,7 +80,7 @@ plt.title('Global Employee Segmentation')
 plt.savefig('global_segmentation.png')
 plt.show()
 
-plt.figure(figsize=(18, 8))
+plt.figure(figsize=(12, 8))
 sub_counts = df_c0['SubCluster'].value_counts().sort_index()
 labels_sub = ['Sub 1: The Safe & Supported', 'Sub 2: The Fearful Skeptics', 'Sub 0: The Uncertain Middle']
 plt.pie(sub_counts, labels=labels_sub, autopct='%1.1f%%', startangle=90, colors=['#ff9999', '#66b3ff', '#99ff99'])
