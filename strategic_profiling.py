@@ -82,7 +82,7 @@ plt.show()
 
 plt.figure(figsize=(8, 8))
 sub_counts = df_c0['SubCluster'].value_counts().sort_index()
-labels_sub = ['Sub 1: The Safe & Supported', 'Sub 2: The Fearful Skeptics', 'Sub 0: The Uncertain Middle']
+labels_sub = ['Sub 1', 'Sub 2', 'Sub 0']
 plt.pie(sub_counts, labels=labels_sub, autopct='%1.1f%%', startangle=90, colors=['#ff9999', '#66b3ff', '#99ff99'])
 plt.title('Breakdown of Target Group (Cluster 0)')
 plt.savefig('target_breakdown.png')
