@@ -75,7 +75,7 @@ df_c0['SubCluster'] = kmeans_c0.fit_predict(X_c0_pca)
 plt.figure(figsize=(12, 8))
 cluster_counts = df['Cluster'].value_counts().sort_index()
 labels_global = ['Cluster 0: The Aware (Target)', 'Cluster 1: The Unaware', 'Cluster 2: Contractors']
-plt.pie(cluster_counts, labels=labels_global, autopct='%1.1f%%', startangle=90, colors="plasma")
+plt.pie(cluster_counts, labels=labels_global, autopct='%1.1f%%', startangle=90, colors="coolwarm")
 plt.title('Global Employee Segmentation')
 plt.savefig('global_segmentation.png')
 plt.show()
