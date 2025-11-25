@@ -92,7 +92,7 @@ q_trust = 'Do you feel that your employer takes mental health as seriously as ph
 if q_trust in df_c0.columns:
     plt.figure(figsize=(10, 6))
     trust_dist = df_c0.groupby('SubCluster')[q_trust].value_counts(normalize=True).unstack().fillna(0)
-    sns.barplot(x=labels_sub, y=trust_dist.get('Yes', 0), colors=['#ff9999', '#66b3ff', '#99ff99'])
+    sns.barplot(x=labels_sub, y=trust_dist.get('Yes', 0), palette=['#ff9999', '#66b3ff', '#99ff99'])
     plt.title('Perception of Employer Support by Sub-Group')
     plt.ylabel('Percentage responding "Yes"')
     plt.ylim(0, 1)
