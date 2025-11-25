@@ -144,7 +144,7 @@ df_c0['SubCluster'] = sub_clusters
 
 # Visualization of Sub-clusters
 plt.figure(figsize=(10, 6))
-sns.scatterplot(x=X_c0_pca[:, 0], y=X_c0_pca[:, 1], hue=sub_clusters, palette='viridis', s=50)
+sns.scatterplot(x=X_c0_pca[:, 0], y=X_c0_pca[:, 1], hue=sub_clusters, palette=['#ff9999', '#66b3ff', '#99ff99'], s=50)
 plt.title('Sub-segmentation of "The Vulnerable & Supported" (Cluster 0)')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
