@@ -82,7 +82,7 @@ clusters = kmeans.fit_predict(X_pca)
 df['Cluster'] = clusters
 
 plt.figure(figsize=(10, 6))
-sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=clusters, palette="viridis", s=50)
+sns.scatterplot(x=X_pca[:, 0], y=X_pca[:, 1], hue=clusters, palette='viridis', s=50)
 plt.title('Mental Health Survey Clusters (PCA Reduced)')
 plt.xlabel('PC1')
 plt.ylabel('PC2')
